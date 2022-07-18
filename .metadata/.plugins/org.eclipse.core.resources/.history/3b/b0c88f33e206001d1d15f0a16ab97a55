@@ -1,0 +1,25 @@
+package co.grandcircus.gradingmongo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import org.springframework.ui.Model;
+
+
+import Repository.GradeRepository;
+
+@Controller
+public class GradeController {
+	
+	@Autowired
+	private GradeRepository repo;
+	
+	
+	@RequestMapping("/")
+	public String gradePageReturn() {
+		return "redirect:/grades";
+	}
+	
+
+}
